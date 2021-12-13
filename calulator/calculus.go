@@ -1,9 +1,5 @@
 package calulator
 
-import (
-	"errors"
-)
-
 func Sumar(nums []int) int {
 	suma := 0
 	for _, num := range nums {
@@ -24,7 +20,7 @@ func Dividir(num1, num2 int) (int, error) {
 	if num2 != 0 {
 		return num1 / num2, nil
 	}
-	return 0, errors.New("no se puede dividir entre 0")
+	return 0, ErrZeroDivision
 }
 
 func Multiplicar(nums []int) int {
